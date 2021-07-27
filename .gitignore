@@ -1,3 +1,5 @@
 .devcontainer/
 .vscode/
 ISIT307A2.code-workspace
+app/styles.scss
+app/styles.css.map
