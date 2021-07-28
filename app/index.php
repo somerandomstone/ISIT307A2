@@ -1,13 +1,15 @@
 <?php
-session_start();
-
-function startGame() {
+function startGame()
+{
     $name = $_POST['fullName'];
     $subject = $_POST['subject'];
 
-    echo "{$name}, {$subject}";
+    header("Location: main-content.php");
 }
+session_start();
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,10 +25,9 @@ function startGame() {
     <div id="landing-page">
         <h1 class="title">Score IT</h1>
         <?php
-            if(isset($_POST['playButton']))
-            {
-                startGame();
-            }
+        if (isset($_POST['playButton'])) {
+            startGame();
+        }
         ?>
         <form class="start-form" method="post">
             <input type="text" name="fullName" placeholder="Please enter your fullname here" /><br>
