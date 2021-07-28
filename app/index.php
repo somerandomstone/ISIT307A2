@@ -4,6 +4,7 @@ function startGame()
     $name = $_POST['fullName'];
     $subject = $_POST['subject'];
 
+    // TODO Make header work for navigation
     header("Location: main-content.php");
 }
 session_start();
