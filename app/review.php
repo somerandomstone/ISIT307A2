@@ -4,8 +4,6 @@ session_start();
 
 ?>
 
-<!-- todo: make adjustments to UI -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,13 +16,15 @@ session_start();
 </head>
 
 <body>
-    <div id="landing-page">
-        <h1>Quiz Review</h1>
-        <?php for ($i = 0; $i < count($_SESSION['selectedFourQ']); $i++) {
-            echo "<h2>" . "Q" . $i + 1 . ") " . $_SESSION['selectedFourQ'][$i]['Qns'] . "?" . "</h2>";
-            echo "<p>" . $_SESSION['msg'][$i] . "</p>";
-        } ?>
-        <input class="" type="submit" name="submit" value="View Results">
+    <div class="eng-page">
+        <div class="review">
+            <h1 class="title">Quiz Review</h1>
+            <?php for ($i = 0; $i < count($_SESSION['selectedFourQ']); $i++) {
+                echo "<h2>" . "Q" . $i + 1 . ") " . $_SESSION['selectedFourQ'][$i]['Qns'] . "?" . "</h2>";
+                echo "<p>" . $_SESSION['msg'][$i] . "</p>";
+            } ?>
+            <button type="submit" name="submit" value="View Results">View Results</button>
+        </div>
     </div>
 </body>
 
