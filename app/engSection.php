@@ -37,8 +37,6 @@ $_SESSION['selectedFourQ'] = $selectedFourQ;
 
 ?>
 
-<!-- todo: make adjustments to UI -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,14 +49,14 @@ $_SESSION['selectedFourQ'] = $selectedFourQ;
 </head>
 
 <body>
-    <div id="landing-page">
-        <h1>English Literature Quiz</h1>
-        <form action="doEngSection.php" method="post">
+    <div class="eng-page">
+        <h1 class="title">English Literature Quiz</h1>
+        <form class="start-form" action="doEngSection.php" method="post">
             <?php for ($i = 0; $i < count($selectedFourQ); $i++) {
                 echo "<h2>" . "Q" . $i + 1 . ") " . $selectedFourQ[$i]['Qns'] . "?" . "</h2></br>";
                 echo "<textarea id='a$i' name='a$i' rows='3' cols='50'></textarea></br>";
             } ?>
-            <input class="" type="submit" name="submit" value="Submit">
+            <button type="submit" name="submit" value="Submit">Submit</button>
         </form>
     </div>
 </body>
