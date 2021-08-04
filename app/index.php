@@ -1,4 +1,11 @@
 <?php
+
+session_start();
+
+if (!isset($_SESSION["attemptNum"])) {
+    $_SESSION["attemptNum"] = 1;
+}
+
 function startGame()
 {
     $name = $_POST['fullName'];
@@ -7,7 +14,7 @@ function startGame()
     // TODO Make header work for navigation
     header("Location: main-content.php");
 }
-session_start();
+
 ?>
 
 
