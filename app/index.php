@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 if (!isset($_SESSION["attemptNum"])) {
@@ -14,7 +13,6 @@ function startGame()
     // TODO Make header work for navigation
     header("Location: main-content.php");
 }
-
 ?>
 
 

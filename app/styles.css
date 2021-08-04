@@ -54,7 +54,7 @@ body {
 }
 
 .eng-page .title {
-  font-size: 100px;
+  font-size: 80px;
 }
 
 .eng-page .start-form {
@@ -64,7 +64,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 .eng-page .start-form input {
