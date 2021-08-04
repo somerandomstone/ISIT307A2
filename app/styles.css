@@ -50,11 +50,11 @@ body {
 .eng-page {
   color: white;
   margin-top: 10%;
+  text-align: center;
 }
 
 .eng-page .title {
-  font-size: 100px;
-  text-align: center;
+  font-size: 80px;
 }
 
 .eng-page .start-form {
@@ -64,6 +64,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin-top: 60px;
 }
 
 .eng-page .start-form input {
