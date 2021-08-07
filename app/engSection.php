@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+$_SESSION['attemptNum'] += 1;
 $questionsAnswers = array(
     array("Qns" => "Who is the bear in The Jungle Book", "Ans" => "Baloo"),
     array("Qns" => "What is the name of the wizard at the court of King Arthur", "Ans" => "Merlin"),
@@ -14,7 +14,6 @@ $questionsAnswers = array(
     array("Qns" => "Who wrote the 'Chronicles of Narnia' series", "Ans" => "C.S. Lewis"),
     array("Qns" => "What is the name of the Lion in The Lion, The Witch and the Wardrobe", "Ans" => "Aslan")
 );
-
 
 $selectedFourQ = [];
 
@@ -34,14 +33,13 @@ function selectQns()
 selectQns();
 
 $_SESSION['selectedFourQ'] = $selectedFourQ;
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
