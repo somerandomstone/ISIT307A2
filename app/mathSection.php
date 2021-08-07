@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+$_SESSION['attemptNum'] += 1;
 $questionsAnswers = array(
     array("Qns" => "What is 2 x 2?", "Ans" => "4"),
     array("Qns" => "What is 2 + 6?", "Ans" => "8"),
