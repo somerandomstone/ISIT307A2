@@ -1,26 +1,18 @@
 <?php
 session_start();
-
 if (!isset($_SESSION["attemptNum"])) {
     $_SESSION["attemptNum"] = 1;
 }
-
-function startGame()
-{
-    $name = $_POST['fullName'];
-    $subject = $_POST['subject'];
-
-    // TODO Make header work for navigation
-    header("Location: main-content.php");
+if (!isset($_SESSION["overallPts"])) {
+    $_SESSION["overallPts"] = 0;
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,12 +22,8 @@ function startGame()
 <body>
     <div id="landing-page">
         <h1 class="title">Score IT</h1>
-        <?php
-        if (isset($_POST['playButton'])) {
-            startGame();
-        }
-        ?>
-        <form class="start-form" method="post">
+        
+        <form class="start-form" action="checkSubject.php" method="POST">
             <input type="text" name="fullName" placeholder="Please enter your fullname here" /><br>
             <label for="subject">Choose a subject: </label>
             <select name="subject" id="subject">
@@ -47,5 +35,4 @@ function startGame()
         </form>
     </div>
 </body>
-
 </html>

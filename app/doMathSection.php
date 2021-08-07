@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 $currentAttempt = array(
@@ -19,7 +20,6 @@ for ($i = 0; $i < count($_SESSION['selectedFourQ']); $i++) {
         $currentAttempt['WrongQuestion']++;
     }
 }
-
 $_SESSION['currentAttempt'] = $currentAttempt;
 $_SESSION["overallPts"] += $_SESSION['currentAttempt']['TotalPoint'];
 
