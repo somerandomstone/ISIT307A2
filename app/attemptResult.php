@@ -1,4 +1,6 @@
-<?php session_start();
+<?php
+session_start();
+
 function increaseAttempt()
 {
     if (isset($_POST['btn_play_agn'])) {
@@ -53,7 +55,6 @@ increaseAttempt();
             <input type="submit" id="btn_play_agn" name="btn_play_agn" value="Play Again">
         </form>
         <a href="finalScore.php">Exit</a>
-        </form>
     </div>
 </body>
 

@@ -1,17 +1,17 @@
 <?php
 session_start();
-$_SESSION['attemptNum'] += 1;
+
 $questionsAnswers = array(
-    array("Qns" => "What is 2 x 2?", "Ans" => "4"),
-    array("Qns" => "What is 2 + 6?", "Ans" => "8"),
-    array("Qns" => "What is 4 / 2?", "Ans" => "2"),
-    array("Qns" => "What is 5 - 2?", "Ans" => "3"),
-    array("Qns" => "What is 2 x 10?", "Ans" => "20"),
-    array("Qns" => "What is 4 + 6?", "Ans" => "10"),
-    array("Qns" => "What is 7 / 7?", "Ans" => "1"),
-    array("Qns" => "What is 5 - 6?", "Ans" => "-1"),
-    array("Qns" => "What is 7 x 5?", "Ans" => "35"),
-    array("Qns" => "What is 3 x 5?", "Ans" => "15")
+    array("Qns" => "What is 2 x 2", "Ans" => "4"),
+    array("Qns" => "What is 2 + 6", "Ans" => "8"),
+    array("Qns" => "What is 4 / 2", "Ans" => "2"),
+    array("Qns" => "What is 5 - 2", "Ans" => "3"),
+    array("Qns" => "What is 2 x 10", "Ans" => "20"),
+    array("Qns" => "What is 4 + 6", "Ans" => "10"),
+    array("Qns" => "What is 7 / 7", "Ans" => "1"),
+    array("Qns" => "What is 5 - 6", "Ans" => "-1"),
+    array("Qns" => "What is 7 x 5", "Ans" => "35"),
+    array("Qns" => "What is 3 x 5", "Ans" => "15")
 );
 
 $selectedFourQ = [];
