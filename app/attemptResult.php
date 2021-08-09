@@ -1,14 +1,6 @@
 <?php
 session_start();
 
-function increaseAttempt()
-{
-    if (isset($_POST['btn_play_agn'])) {
-        $_SESSION['attemptNum'] += 1;
-    }
-}
-increaseAttempt();
-
 ?>
 
 <!DOCTYPE html>
