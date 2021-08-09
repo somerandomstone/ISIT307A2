@@ -22,7 +22,7 @@ if (!isset($_SESSION["overallPts"])) {
 <body>
     <div id="landing-page">
         <h1 class="title">Score IT</h1>
-        
+
         <form class="start-form" action="checkSubject.php" method="POST">
             <input type="text" name="fullName" placeholder="Please enter your fullname here" /><br>
             <label for="subject">Choose a subject: </label>

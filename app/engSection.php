@@ -53,7 +53,7 @@ $_SESSION['selectedFourQ'] = $selectedFourQ;
         <form class="start-form" action="doEngSection.php" method="post">
             <?php for ($i = 0; $i < count($selectedFourQ); $i++) {
                 echo "<h2>" . "Q" . $i + 1 . ") " . $selectedFourQ[$i]['Qns'] . "?" . "</h2></br>";
-                echo "<textarea id='a$i' name='a$i' rows='3' cols='50'></textarea></br>";
+                echo "<textarea class='answer-input' id='a$i' name='a$i' rows='3' cols='50'></textarea></br>";
             } ?>
             <button type="submit" name="submit" value="Submit">Submit</button>
         </form>

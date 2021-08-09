@@ -50,11 +50,11 @@ $_SESSION['selectedFourQ'] = $selectedFourQ;
         <h1 class="title">Mathematics Quiz</h1>
         <h1>Attempt <?php echo $_SESSION["attemptNum"] ?></h1>
         <form class="start-form" action="doMathSection.php" method="post">
-            <?php 
+            <?php
             $qnsNum = 1;
             for ($i = 0; $i < count($selectedFourQ); $i++) {
                 echo "<h2>" . "Q" . $qnsNum . ") " . $selectedFourQ[$i]['Qns'] . "?" . "</h2></br>";
-                echo "<textarea id='a$i' name='a$i' rows='3' cols='50'></textarea></br>";
+                echo "<textarea class='answer-input' id='a$i' name='a$i' rows='3' cols='50'></textarea></br>";
                 $qnsNum++;
             } ?>
             <button type="submit" name="submit" value="Submit">Submit</button>

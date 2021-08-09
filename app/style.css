@@ -2,10 +2,10 @@ body {
   width: 100%;
   height: 100%;
   background-color: #202124;
+  color: white;
 }
 
 #landing-page {
-  color: white;
   margin-top: 10%;
 }
 
@@ -24,6 +24,7 @@ body {
 }
 
 #landing-page .start-form input {
+  text-align: center;
   width: 300px;
   padding: 10px 10px;
   margin-bottom: 15px;
@@ -42,6 +43,10 @@ body {
 
 #main-content {
   background-color: 202124;
+}
+
+.answer-input {
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */
 
@@ -92,3 +97,50 @@ body {
 }
 
 /* english section ends */
+
+/* result page */
+.result-page {
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.result-page table {
+  text-align: center;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.result-page .attempt-number {
+  text-align: center;
+}
+
+.result-page th,
+.result-page td {
+  padding: 25px;
+  border: 1px solid white;
+}
+
+.result-page input {
+  margin-top: 15px;
+  font-size: 40px;
+  background-color: green;
+  border-radius: 20px;
+}
+
+.result-page a {
+  margin-top: 30px;
+  font-size: 30px;
+  border-radius: 20px;
+}
+
+.result-page a,
+.result-page a:visited,
+.result-page a:hover,
+.result-page a:active {
+  color: red;
+}

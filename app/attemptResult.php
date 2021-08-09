@@ -1,60 +1,60 @@
-<?php session_start(); 
-function increaseAttempt() {
-    if(isset($_POST['btn_play_agn'])) {
+<?php session_start();
+function increaseAttempt()
+{
+    if (isset($_POST['btn_play_agn'])) {
         $_SESSION['attemptNum'] += 1;
     }
 }
 increaseAttempt();
 
-echo "Overall PTs:" . $_SESSION['overallPts'];
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result</title>
-    <style>
-        table, tr, td {
-            border: 1px solid black;
-        }
-    </style>
 </head>
-<body>
-    <table>
-        <thead>
-            <tr>
-                <td id="attempt">Attempt # <?php echo $_SESSION['attemptNum']; ?></td>
-            </tr>
-            <tr>
-                <td>Name</td>
-                <td>Score</td>
-                <td>Correct</td>
-                <td>Wrong</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><?php echo $_SESSION['name']; ?></td>
-                <td><?php echo $_SESSION['currentAttempt']['TotalPoint']; ?></td>
-                <td><?php echo $_SESSION['currentAttempt']['CorrectQuestion']; ?></td>
-                <td><?php echo $_SESSION['currentAttempt']['WrongQuestion']; ?></td>
-            </tr>
-        </tbody>
-    </table>
 
-    <form action="checkSubject.php" method="post">
-        <input type="radio" name="subject" value="mathematics" required>
-        <label for="">Mathematics</label>
-        <input type="radio" name="subject" value="literature" required>
-        <label for="">Literature</label>
-        <br>
-        <input type="submit" id="btn_play_agn" name="btn_play_agn" value="Play Again">
-    </form>
-    <form action="" method="post">
-        <input type="button" id="btn_exit" name="btn_exit" value="Exit">
-    </form>
+<body>
+    <div class="result-page">
+        <h1><?php echo $_SESSION['name']; ?></h1>
+        <h1><?php echo "Overall PTs: " . $_SESSION['overallPts']; ?></h1>
+        <table>
+            <thead>
+                <tr class="attempt-number">
+                    <th id="attempt" colspan="3">Attempt # <?php echo $_SESSION['attemptNum']; ?></th>
+                </tr>
+                <tr>
+                    <th>Score</th>
+                    <th>Correct</th>
+                    <th>Wrong</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><?php echo $_SESSION['currentAttempt']['TotalPoint']; ?></td>
+                    <td><?php echo $_SESSION['currentAttempt']['CorrectQuestion']; ?></td>
+                    <td><?php echo $_SESSION['currentAttempt']['WrongQuestion']; ?></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form action="checkSubject.php" method="post">
+            <input type="radio" name="subject" value="mathematics" required>
+            <label for="">Mathematics</label>
+            <input type="radio" name="subject" value="literature" required>
+            <label for="">Literature</label>
+            <br>
+            <input type="submit" id="btn_play_agn" name="btn_play_agn" value="Play Again">
+        </form>
+        <a href="finalScore.php">Exit</a>
+        </form>
+    </div>
 </body>
+
 </html>
