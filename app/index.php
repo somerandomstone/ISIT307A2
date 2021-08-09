@@ -1,8 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION["attemptNum"])) {
-    $_SESSION["attemptNum"] = 1;
-}
+
 if (!isset($_SESSION["overallPts"])) {
     $_SESSION["overallPts"] = 0;
 }
@@ -35,4 +33,5 @@ if (!isset($_SESSION["overallPts"])) {
         </form>
     </div>
 </body>
+
 </html>

@@ -1,7 +1,6 @@
 <?php
-
 session_start();
-$_SESSION['attemptNum'] += 1;
+
 $questionsAnswers = array(
     array("Qns" => "Who is the bear in The Jungle Book", "Ans" => "Baloo"),
     array("Qns" => "What is the name of the wizard at the court of King Arthur", "Ans" => "Merlin"),
