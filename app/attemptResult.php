@@ -16,7 +16,6 @@ session_start();
 
 <body>
     <div class="result-page">
-        <h1><?php echo $_SESSION['name']; ?></h1>
         <h1><?php echo "Overall PTs: " . $_SESSION['overallPts']; ?></h1>
         <table>
             <thead>
